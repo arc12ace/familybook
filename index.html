@@ -1,0 +1,28 @@
+<html>
+<head> 
+    <title> Family book </title>
+</head>
+<body> 
+    <h1> My Family Book </h1>
+    <img id="famcoverpg" src="https://i.pinimg.com/736x/4e/fa/fa/4efafaa7263898f45063990000791ca9.jpg"> 
+    <h3 id="famname"> </h3>
+    <button id="nextbutton" onclick="next()"> NEXT </button>
+    <script>
+        var images=["https://images-na.ssl-images-amazon.com/images/I/61zTGIEvQoL.jpg", "https://image.shutterstock.com/image-vector/father-his-cute-little-daughter-260nw-1419842672.jpg","https://cdn2.vectorstock.com/i/1000x1000/31/36/mother-admire-daughter-character-cartoon-vector-14673136.jpg"]
+        var names=["Family Book", "Dad, Parthasarathi Roy Choudhury", "Mom, Sonal Pathak"]
+        var x=0
+        function next(){
+            x++;
+            var family_members_in_array=2
+            if(x> family_members_in_array){
+                x=0;
+            }
+            var updatedIamge=images[x];
+            var updatedName=names[x];
+            document.getElementById("famcoverpg").src=images[x]
+            document.getElementById("famname").innerHTML=names[x]
+            
+        }
+    </script>
+</body>
+</html>
